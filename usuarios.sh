@@ -6,10 +6,6 @@
 # data: 04/03/2020
 # Versão 0.1
 
-
-
-
-
 #Antes de iniciar, verifica se tem a permissão de root.
 if [ "$(id -u)" != "0" ]; then 
 
@@ -19,7 +15,6 @@ if [ "$(id -u)" != "0" ]; then
 	exit 
 
 fi
-
 
 #Função para criar os usuários de acordo com o que está no arquivo de texto indicado.
 #Lembrando que o arquivo de texto deve estar no formato Username:/home/userhome:full_name.
@@ -42,8 +37,6 @@ function CreateUsers() {
 		echo -e "\nUsuário $USERNAME adicionado com sucesso!"
 		
 	done < "$ARQUIVO_TEXTO"
-	
-	
 
 }
 
@@ -103,7 +96,6 @@ function LoadFile() {
 
 			ARQUIVO=$1			
 
-
 }
 
 #Aqui é que a coisa realmente acontece.
@@ -156,8 +148,4 @@ if [ "$ARQUIVO_TXT" ]; then
 	
 	fi
 	
-
 fi
-		
-	
-		
